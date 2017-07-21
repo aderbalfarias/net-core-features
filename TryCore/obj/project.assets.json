@@ -9775,10 +9775,10 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\GitRepository\\TryCore\\TryCore\\TryCore\\TryCore.csproj",
+      "projectUniqueName": "C:\\GitRepository\\TryCore\\TryCore\\TryCore.csproj",
       "projectName": "TryCore",
-      "projectPath": "C:\\GitRepository\\TryCore\\TryCore\\TryCore\\TryCore.csproj",
-      "outputPath": "C:\\GitRepository\\TryCore\\TryCore\\TryCore\\obj\\",
+      "projectPath": "C:\\GitRepository\\TryCore\\TryCore\\TryCore.csproj",
+      "outputPath": "C:\\GitRepository\\TryCore\\TryCore\\obj\\",
       "projectStyle": "PackageReference",
       "originalTargetFrameworks": [
         "netcoreapp1.1"
