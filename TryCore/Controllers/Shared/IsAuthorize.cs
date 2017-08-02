@@ -10,10 +10,9 @@ namespace Gsys.Mvc.Controllers.Shared
         {
         }
 
-        public override void OnActionExecuting(ActionExecutingContext filterContext)
-        {
-            
-        }
+        //public override void OnActionExecuting(ActionExecutingContext filterContext)
+        //{            
+        //}
 
         //public override void OnActionExecuted(ActionExecutedContext filterContext)
         //{
