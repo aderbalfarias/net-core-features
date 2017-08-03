@@ -23,9 +23,5 @@ namespace Gsys.Mvc.Controllers.Shared
         public string Login => FindFirst("Login").Value;
         
         public IEnumerable<int> IdsMenu => FindFirst("IdsMenu").Value?.Split('|').Select(int.Parse);
-
-        public IEnumerable<long> IdsHierarquia => FindFirst("IdsHierarquia").Value?.Split('|').Select(long.Parse);
-
-        public string Token => FindFirst("Token").Value;
     }
 }

@@ -21,6 +21,7 @@
         #endregion
 
         #region Properties
+
         public string Title { get; set; }
 
         public string Detail { get; set; }
@@ -28,6 +29,7 @@
         public int? TimeoutSeconds { get; set; }
 
         public MessageKind Kind { get; set; }
+
         #endregion
 
         #region Methods
