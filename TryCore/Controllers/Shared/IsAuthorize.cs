@@ -6,9 +6,9 @@ namespace Gsys.Mvc.Controllers.Shared
     public class IsAuthorize : ActionFilterAttribute
     {
 
-        public IsAuthorize()
-        {
-        }
+        //public IsAuthorize()
+        //{
+        //}
 
         //public override void OnActionExecuting(ActionExecutingContext filterContext)
         //{        
