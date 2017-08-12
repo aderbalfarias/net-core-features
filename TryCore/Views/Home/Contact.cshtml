@@ -11,4 +11,18 @@
             I'm available for freelance. The best way I know for success is to invest in our ideas, I hope your contact, the next project can be yours!
         </p>
     </div>
+
+    <form method="post" action="/Demo/RegisterInput">
+        Email:
+        <input type="email" data-val="true"
+               data-val-email="The Email Address field is not a valid e-mail address."
+               data-val-required="The Email Address field is required."
+               id="Email" name="Email" value="" /> <br>
+        Password:
+        <input type="password" data-val="true"
+               data-val-required="The Password field is required."
+               id="Password" name="Password" /><br>
+        <button type="submit">Register</button>
+        <input name="__RequestVerificationToken" type="hidden" value="<removed for brevity>" />
+    </form>
 </div>
