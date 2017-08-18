@@ -44,6 +44,7 @@ namespace TryCore.Helpers
             output.Attributes.SetAttribute("id", Id);
             output.Attributes.SetAttribute("aria-labelledby", $"{context.UniqueId}Label");
             output.Attributes.SetAttribute("tabindex", "-1");
+
             var classNames = "modal fade";
             if (output.Attributes.ContainsName("class"))
             {
@@ -51,11 +52,13 @@ namespace TryCore.Helpers
             }
             output.Attributes.SetAttribute("class", classNames);
             output.Content.AppendHtml(template);
+
             if (modalContext.Body != null)
             {
                 output.Content.AppendHtml(modalContext.Body);
             }
             output.Content.AppendHtml("</div>");
+
             if (modalContext.Footer != null)
             {
                 output.Content.AppendHtml("<div class='modal-footer'>");
