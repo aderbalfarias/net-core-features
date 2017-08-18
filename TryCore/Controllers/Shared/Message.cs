@@ -6,10 +6,7 @@
         #endregion
 
         #region Enuns
-
-        /// <summary>
-        /// Enum que define os possíveis tipos de mensagens
-        /// </summary>
+        
         public enum MessageKind
         {
             Warning, 
