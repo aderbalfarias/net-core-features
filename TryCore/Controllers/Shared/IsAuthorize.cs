@@ -10,10 +10,13 @@ namespace Gsys.Mvc.Controllers.Shared
         //{
         //}
 
-        //public override void OnActionExecuting(ActionExecutingContext filterContext)
-        //{        
-        //    base.OnActionExecuted(filterContext);
-        //}
+        public override void OnActionExecuting(ActionExecutingContext context)
+        {
+            if (!context.ModelState.IsValid)
+            {
+                //context.Result = new BadRequestObjectResult(context.ModelState);
+            }
+        }
 
         //public override void OnActionExecuted(ActionExecutedContext filterContext)
         //{
