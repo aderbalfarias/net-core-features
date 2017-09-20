@@ -1,4 +1,4 @@
-# TryCore
+# NetCoreExamples
 
 This repository is used for studies focused on the new version of the .NET Framework, specifically .NET Core.
 
