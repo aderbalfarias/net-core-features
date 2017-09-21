@@ -1,7 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using AboutNetCore.Version1_0.DefaultTemplate.Data;
+using AboutNetCore.Version1_0.DefaultTemplate.Models;
+using AboutNetCore.Version1_0.DefaultTemplate.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
@@ -9,9 +8,6 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using AboutNetCore.Version1_0.DefaultTemplate.Data;
-using AboutNetCore.Version1_0.DefaultTemplate.Models;
-using AboutNetCore.Version1_0.DefaultTemplate.Services;
 
 namespace AboutNetCore.Version1_0.DefaultTemplate
 {

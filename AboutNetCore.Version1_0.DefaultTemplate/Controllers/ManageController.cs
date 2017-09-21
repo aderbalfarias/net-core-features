@@ -1,15 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using AboutNetCore.Version1_0.DefaultTemplate.Models;
+using AboutNetCore.Version1_0.DefaultTemplate.Models.ManageViewModels;
+using AboutNetCore.Version1_0.DefaultTemplate.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using AboutNetCore.Version1_0.DefaultTemplate.Models;
-using AboutNetCore.Version1_0.DefaultTemplate.Models.ManageViewModels;
-using AboutNetCore.Version1_0.DefaultTemplate.Services;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace AboutNetCore.Version1_0.DefaultTemplate.Controllers
 {

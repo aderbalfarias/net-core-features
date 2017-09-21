@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using AboutNetCore.Version1_0.DefaultTemplate.Models;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using AboutNetCore.Version1_0.DefaultTemplate.Models;
 
 namespace AboutNetCore.Version1_0.DefaultTemplate.Data
 {
