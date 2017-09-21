@@ -48,3 +48,7 @@ textarea {
         display: none;
     }
 }
+
+.test-css-min {
+    background-color: black;
+}
