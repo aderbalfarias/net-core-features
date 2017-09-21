@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AboutNetCore.Version1_0", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AboutNetCore.Version1_0.DefaultTemplate", "AboutNetCore.Version1_0.DefaultTemplate\AboutNetCore.Version1_0.DefaultTemplate.csproj", "{DBD4E5CB-4835-412C-BCD2-D0D14A2EAA23}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AboutNetCore.Version1_0.WebApi", "AboutNetCore.Version1_0.WebApi\AboutNetCore.Version1_0.WebApi.csproj", "{F9B479CB-8BA3-459F-811F-F2AF1B48C0B1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{DBD4E5CB-4835-412C-BCD2-D0D14A2EAA23}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DBD4E5CB-4835-412C-BCD2-D0D14A2EAA23}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DBD4E5CB-4835-412C-BCD2-D0D14A2EAA23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9B479CB-8BA3-459F-811F-F2AF1B48C0B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9B479CB-8BA3-459F-811F-F2AF1B48C0B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9B479CB-8BA3-459F-811F-F2AF1B48C0B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9B479CB-8BA3-459F-811F-F2AF1B48C0B1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
