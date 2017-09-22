@@ -51,6 +51,8 @@ namespace AboutNetCore.Version1_0
                 });
             }
 
+            //app.UseDefaultFiles(); //To initialize sistem with html default page like index.hmtl
+            //app.UseFileServer(); //server static files
             app.UseStaticFiles();
 
             app.UseWelcomePage(new WelcomePageOptions
