@@ -37,10 +37,13 @@ namespace AboutNetCore.Version1_0
         {
             loggerFactory.AddConsole();
 
-            if (env.IsDevelopment())
-            {
-                app.UseDeveloperExceptionPage();
-            }
+
+            //if (env.IsDevelopment())
+            //{
+            //    app.UseDeveloperExceptionPage();
+            //}
+
+            app.UseWelcomePage("/test");
 
             app.Run(async (context) =>
             {
