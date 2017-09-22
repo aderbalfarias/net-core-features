@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using System;
 
 namespace AboutNetCore.Version1_0
 {
@@ -37,19 +38,27 @@ namespace AboutNetCore.Version1_0
         {
             loggerFactory.AddConsole();
 
+            if (env.IsDevelopment())
+            {
+                app.UseDeveloperExceptionPage();
+            }
 
-            //if (env.IsDevelopment())
-            //{
-            //    app.UseDeveloperExceptionPage();
-            //}
-
-            app.UseWelcomePage("/test");
+            app.UseWelcomePage(new WelcomePageOptions
+            {
+                Path = "/welcome/test"
+            });
 
             app.Run(async (context) =>
             {
+                throw new Exception("Somenthig wrong");
                 var message = greeter.GetGreeting();
                 await context.Response.WriteAsync(message);
             });
+
+
+            //there is a sequence of Middlewares 
+            //if I put app.UseDeveloperExceptionPage() under app.Run() 
+            //for example, I won't see a exception 
         }
     }
 }
