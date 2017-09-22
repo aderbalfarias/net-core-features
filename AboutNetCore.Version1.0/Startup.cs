@@ -4,7 +4,6 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using System;
 
 namespace AboutNetCore.Version1_0
 {
@@ -38,10 +37,21 @@ namespace AboutNetCore.Version1_0
         {
             loggerFactory.AddConsole();
 
+            //Configure in: Properties > Debug > ASPNETCORE_ENVIRONMENT
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
+            else
+            {
+                //app.UseExceptionHandler("/error");
+                app.UseExceptionHandler(new ExceptionHandlerOptions
+                {
+                    ExceptionHandler = context => context.Response.WriteAsync("You aren't in Development")
+                });
+            }
+
+            app.UseStaticFiles();
 
             app.UseWelcomePage(new WelcomePageOptions
             {
@@ -50,7 +60,7 @@ namespace AboutNetCore.Version1_0
 
             app.Run(async (context) =>
             {
-                throw new Exception("Somenthig wrong");
+                //throw new Exception("Somenthig wrong");
                 var message = greeter.GetGreeting();
                 await context.Response.WriteAsync(message);
             });
