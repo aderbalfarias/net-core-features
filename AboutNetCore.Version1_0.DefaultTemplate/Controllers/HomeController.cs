@@ -1,20 +1,9 @@
-﻿using AboutNetCore.Version1_0.DefaultTemplate.Entities;
-using AboutNetCore.Version1_0.DefaultTemplate.Services.Interfaces;
-using AboutNetCore.Version1_0.DefaultTemplate.ViewModels.Home;
-using Microsoft.AspNetCore.Mvc;
-using System.Linq;
+﻿using Microsoft.AspNetCore.Mvc;
 
 namespace AboutNetCore.Version1_0.DefaultTemplate.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ITesteService _testeService;
-
-        public HomeController(ITesteService testeService)
-        {
-            _testeService = testeService;
-        }
-
         public IActionResult Index()
         {
             //Using ControllerContext
@@ -25,55 +14,6 @@ namespace AboutNetCore.Version1_0.DefaultTemplate.Controllers
             var headers = this.HttpContext.Response.Headers;
 
             return View();
-        }
-
-        public IActionResult TestObject()
-        {
-            var model = new TestViewModel
-            {
-                Id = 1,
-                Name = "Hello World"
-            };
-
-            //return Json
-            return new ObjectResult(model);
-        }
-
-        public IActionResult TestViewList()
-        {
-            var model = _testeService
-                .GetAll()
-                .Select(s => new TestViewModel
-                {
-                    Id = s.Id,
-                    Name = s.Name
-                });
-
-            return View(model);
-        }
-
-        public IActionResult TestViewDynamic()
-        {
-
-            var model = new Test
-            {
-                Id = 1,
-                Name = "Hello World"
-            };
-
-            return View(model);
-        }
-
-        public IActionResult TestViewDirective()
-        {
-
-            var model = new TestViewModel
-            {
-                Id = 1,
-                Name = "Hello World"
-            };
-
-            return View(model);
         }
 
         public IActionResult About()

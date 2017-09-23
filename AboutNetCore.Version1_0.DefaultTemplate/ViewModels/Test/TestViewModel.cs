@@ -1,4 +1,4 @@
-﻿namespace AboutNetCore.Version1_0.DefaultTemplate.ViewModels.Home
+﻿namespace AboutNetCore.Version1_0.DefaultTemplate.ViewModels.Test
 {
     public class TestViewModel
     {

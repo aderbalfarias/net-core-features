@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
+using System;
 
 namespace AboutNetCore.Version1_0.DefaultTemplate.Data.Migrations
 {
@@ -126,7 +123,7 @@ namespace AboutNetCore.Version1_0.DefaultTemplate.Data.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
-            modelBuilder.Entity("AboutNetCore.Version1_0.DefaultTemplate.Models.ApplicationUser", b =>
+            modelBuilder.Entity("AboutNetCore.Version1_0.DefaultTemplate.Entities.ApplicationUser", b =>
                 {
                     b.Property<string>("Id");
 
@@ -185,7 +182,7 @@ namespace AboutNetCore.Version1_0.DefaultTemplate.Data.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.EntityFrameworkCore.IdentityUserClaim<string>", b =>
                 {
-                    b.HasOne("AboutNetCore.Version1_0.DefaultTemplate.Models.ApplicationUser")
+                    b.HasOne("AboutNetCore.Version1_0.DefaultTemplate.Entities.ApplicationUser")
                         .WithMany("Claims")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade);
@@ -193,7 +190,7 @@ namespace AboutNetCore.Version1_0.DefaultTemplate.Data.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.EntityFrameworkCore.IdentityUserLogin<string>", b =>
                 {
-                    b.HasOne("AboutNetCore.Version1_0.DefaultTemplate.Models.ApplicationUser")
+                    b.HasOne("AboutNetCore.Version1_0.DefaultTemplate.Entities.ApplicationUser")
                         .WithMany("Logins")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade);
@@ -206,7 +203,7 @@ namespace AboutNetCore.Version1_0.DefaultTemplate.Data.Migrations
                         .HasForeignKey("RoleId")
                         .OnDelete(DeleteBehavior.Cascade);
 
-                    b.HasOne("AboutNetCore.Version1_0.DefaultTemplate.Models.ApplicationUser")
+                    b.HasOne("AboutNetCore.Version1_0.DefaultTemplate.Entities.ApplicationUser")
                         .WithMany("Roles")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade);

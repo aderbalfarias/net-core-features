@@ -1,4 +1,4 @@
-﻿@model IEnumerable<AboutNetCore.Version1_0.DefaultTemplate.ViewModels.Home.TestViewModel>
+﻿@model IEnumerable<AboutNetCore.Version1_0.DefaultTemplate.ViewModels.Test.TestViewModel>
 @{
     ViewData["Title"] = "Test View with List";
 }
@@ -9,6 +9,7 @@
     {
         <tr>
             <td>@item.Name</td>
+            <td><a asp-controller="Test" asp-action="Details" asp-route-id="@item.Id">Details</a></td>
         </tr>
     }
 </table>

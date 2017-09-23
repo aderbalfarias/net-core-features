@@ -1,4 +1,5 @@
 ﻿using AboutNetCore.Version1_0.DefaultTemplate.Data;
+using AboutNetCore.Version1_0.DefaultTemplate.Entities;
 using AboutNetCore.Version1_0.DefaultTemplate.Services;
 using AboutNetCore.Version1_0.DefaultTemplate.Services.Interfaces;
 using Microsoft.AspNetCore.Builder;

@@ -6,7 +6,7 @@ namespace AboutNetCore.Version1_0.DefaultTemplate.ViewModels.Account
     {
         [Required]
         public string Provider { get; set; }
-
+         
         [Required]
         public string Code { get; set; }
 

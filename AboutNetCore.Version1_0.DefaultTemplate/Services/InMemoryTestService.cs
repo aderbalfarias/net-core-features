@@ -26,5 +26,10 @@ namespace AboutNetCore.Version1_0.DefaultTemplate.Services
         {
             return _testList.ToList();
         }
+
+        public Test Get(int id)
+        {
+            return _testList.FirstOrDefault(f => f.Id == id);
+        }
     }
 }

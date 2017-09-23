@@ -6,5 +6,6 @@ namespace AboutNetCore.Version1_0.DefaultTemplate.Services.Interfaces
     public interface ITesteService
     {
         IEnumerable<Test> GetAll();
+        Test Get(int id);
     }
 }
