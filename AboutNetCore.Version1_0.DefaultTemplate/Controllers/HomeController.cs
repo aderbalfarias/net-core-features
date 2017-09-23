@@ -6,6 +6,12 @@ namespace AboutNetCore.Version1_0.DefaultTemplate.Controllers
     {
         public IActionResult Index()
         {
+            //Using ControllerContext
+            var actionName = this.ControllerContext.ActionDescriptor.ActionName;
+            var methodInfo = this.ControllerContext.ActionDescriptor.MethodInfo;
+
+            //Example with httpContext, but there are other options to get info avoid HttpContext
+            var headers = this.HttpContext.Response.Headers;
             return View();
         }
 

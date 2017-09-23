@@ -14,17 +14,15 @@ namespace AboutNetCore.Version1_0.DefaultTemplate.Controllers
         //[Route("[action]")]
         public IActionResult Index()
         {
-            ViewBag.Route = "Get Index";
-
+            //return Content("Index");
             return View();
         }
 
-        [Route("xy")]
+        [Route("xpto")]
         //[Route("[action]")]
         public IActionResult GetXpto()
         {
-            ViewBag.Route = "Get Index";
-
+            //return Content("GetXpto");
             return View();
         }
     }
