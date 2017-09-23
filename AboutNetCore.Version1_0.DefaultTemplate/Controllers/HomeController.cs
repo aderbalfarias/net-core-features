@@ -1,10 +1,18 @@
 ﻿using AboutNetCore.Version1_0.DefaultTemplate.Models;
+using AboutNetCore.Version1_0.DefaultTemplate.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AboutNetCore.Version1_0.DefaultTemplate.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly ITesteService _testeService;
+
+        public HomeController(ITesteService testeService)
+        {
+            _testeService = testeService;
+        }
+
         public IActionResult Index()
         {
             //Using ControllerContext
@@ -27,6 +35,13 @@ namespace AboutNetCore.Version1_0.DefaultTemplate.Controllers
 
             //return Json
             return new ObjectResult(model);
+        }
+
+        public IActionResult TestViewList()
+        {
+            var model = _testeService.GetAll();
+
+            return View(model);
         }
 
         public IActionResult TestViewDynamic()

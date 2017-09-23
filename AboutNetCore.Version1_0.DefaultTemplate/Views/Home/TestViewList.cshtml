@@ -1,0 +1,14 @@
+﻿@model IEnumerable<Test>
+@{
+    ViewData["Title"] = "Test View with List";
+}
+
+<h2>@ViewData["Title"].</h2>
+<table>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Name</td>
+        </tr>
+    }
+</table>

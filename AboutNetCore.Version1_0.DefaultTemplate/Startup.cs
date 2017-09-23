@@ -1,6 +1,7 @@
 ﻿using AboutNetCore.Version1_0.DefaultTemplate.Data;
 using AboutNetCore.Version1_0.DefaultTemplate.Models;
 using AboutNetCore.Version1_0.DefaultTemplate.Services;
+using AboutNetCore.Version1_0.DefaultTemplate.Services.Interfaces;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
@@ -45,9 +46,14 @@ namespace AboutNetCore.Version1_0.DefaultTemplate
 
             services.AddMvc();
 
+            //AddTransient = A new instance is created each time the service is requested
+            //AddSingleton = One instance for entire app, every method and component needs a Ix for example
+            //AddScoped = A new instance for each Http request
+
             // Add application services.
             services.AddTransient<IEmailSender, AuthMessageSender>();
             services.AddTransient<ISmsSender, AuthMessageSender>();
+            services.AddScoped<ITesteService, InMemoryTestService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

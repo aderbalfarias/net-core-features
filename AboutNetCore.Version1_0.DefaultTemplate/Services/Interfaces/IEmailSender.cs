@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace AboutNetCore.Version1_0.DefaultTemplate.Services
+namespace AboutNetCore.Version1_0.DefaultTemplate.Services.Interfaces
 {
     public interface IEmailSender
     {

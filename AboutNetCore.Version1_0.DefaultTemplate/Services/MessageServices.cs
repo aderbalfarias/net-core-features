@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using AboutNetCore.Version1_0.DefaultTemplate.Services.Interfaces;
+using System.Threading.Tasks;
 
 namespace AboutNetCore.Version1_0.DefaultTemplate.Services
 {

@@ -1,6 +1,6 @@
 ﻿using AboutNetCore.Version1_0.DefaultTemplate.Models;
 using AboutNetCore.Version1_0.DefaultTemplate.Models.AccountViewModels;
-using AboutNetCore.Version1_0.DefaultTemplate.Services;
+using AboutNetCore.Version1_0.DefaultTemplate.Services.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
