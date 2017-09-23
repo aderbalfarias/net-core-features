@@ -1,6 +1,8 @@
 ﻿using AboutNetCore.Version1_0.DefaultTemplate.Entities;
 using AboutNetCore.Version1_0.DefaultTemplate.Services.Interfaces;
+using AboutNetCore.Version1_0.DefaultTemplate.ViewModels.Home;
 using Microsoft.AspNetCore.Mvc;
+using System.Linq;
 
 namespace AboutNetCore.Version1_0.DefaultTemplate.Controllers
 {
@@ -27,7 +29,7 @@ namespace AboutNetCore.Version1_0.DefaultTemplate.Controllers
 
         public IActionResult TestObject()
         {
-            var model = new Test
+            var model = new TestViewModel
             {
                 Id = 1,
                 Name = "Hello World"
@@ -39,7 +41,13 @@ namespace AboutNetCore.Version1_0.DefaultTemplate.Controllers
 
         public IActionResult TestViewList()
         {
-            var model = _testeService.GetAll();
+            var model = _testeService
+                .GetAll()
+                .Select(s => new TestViewModel
+                {
+                    Id = s.Id,
+                    Name = s.Name
+                });
 
             return View(model);
         }
@@ -59,7 +67,7 @@ namespace AboutNetCore.Version1_0.DefaultTemplate.Controllers
         public IActionResult TestViewDirective()
         {
 
-            var model = new Test
+            var model = new TestViewModel
             {
                 Id = 1,
                 Name = "Hello World"
