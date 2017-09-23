@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace AboutNetCore.Version1_0.DefaultTemplate.Models.ManageViewModels
+namespace AboutNetCore.Version1_0.DefaultTemplate.ViewModels.Manage
 {
     public class AddPhoneNumberViewModel
     {

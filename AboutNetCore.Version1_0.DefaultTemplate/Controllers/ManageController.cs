@@ -1,6 +1,7 @@
-﻿using AboutNetCore.Version1_0.DefaultTemplate.Models;
+﻿using AboutNetCore.Version1_0.DefaultTemplate.Entities;
 using AboutNetCore.Version1_0.DefaultTemplate.Models.ManageViewModels;
 using AboutNetCore.Version1_0.DefaultTemplate.Services.Interfaces;
+using AboutNetCore.Version1_0.DefaultTemplate.ViewModels.Manage;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;

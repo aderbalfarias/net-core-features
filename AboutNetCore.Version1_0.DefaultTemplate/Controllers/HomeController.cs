@@ -1,4 +1,4 @@
-﻿using AboutNetCore.Version1_0.DefaultTemplate.Models;
+﻿using AboutNetCore.Version1_0.DefaultTemplate.Entities;
 using AboutNetCore.Version1_0.DefaultTemplate.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 

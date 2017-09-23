@@ -1,4 +1,4 @@
-﻿namespace AboutNetCore.Version1_0.DefaultTemplate.Models
+﻿namespace AboutNetCore.Version1_0.DefaultTemplate.Entities
 {
     public class Test
     {

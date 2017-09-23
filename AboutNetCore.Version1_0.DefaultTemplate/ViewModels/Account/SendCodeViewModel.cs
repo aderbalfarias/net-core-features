@@ -1,7 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc.Rendering;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
-namespace AboutNetCore.Version1_0.DefaultTemplate.Models.AccountViewModels
+namespace AboutNetCore.Version1_0.DefaultTemplate.ViewModels.Account
 {
     public class SendCodeViewModel
     {

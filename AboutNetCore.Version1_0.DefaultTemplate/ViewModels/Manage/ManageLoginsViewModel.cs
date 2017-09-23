@@ -1,8 +1,8 @@
-﻿using Microsoft.AspNetCore.Http.Authentication;
+﻿using System.Collections.Generic;
+using Microsoft.AspNetCore.Http.Authentication;
 using Microsoft.AspNetCore.Identity;
-using System.Collections.Generic;
 
-namespace AboutNetCore.Version1_0.DefaultTemplate.Models.ManageViewModels
+namespace AboutNetCore.Version1_0.DefaultTemplate.ViewModels.Manage
 {
     public class ManageLoginsViewModel
     {

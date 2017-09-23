@@ -1,7 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc.Rendering;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
-namespace AboutNetCore.Version1_0.DefaultTemplate.Models.ManageViewModels
+namespace AboutNetCore.Version1_0.DefaultTemplate.ViewModels.Manage
 {
     public class ConfigureTwoFactorViewModel
     {

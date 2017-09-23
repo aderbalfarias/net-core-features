@@ -1,7 +1,7 @@
-﻿using Microsoft.AspNetCore.Identity;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using Microsoft.AspNetCore.Identity;
 
-namespace AboutNetCore.Version1_0.DefaultTemplate.Models.ManageViewModels
+namespace AboutNetCore.Version1_0.DefaultTemplate.ViewModels.Manage
 {
     public class IndexViewModel
     {

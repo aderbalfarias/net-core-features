@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace AboutNetCore.Version1_0.DefaultTemplate.Models.AccountViewModels
+namespace AboutNetCore.Version1_0.DefaultTemplate.ViewModels.Account
 {
     public class LoginViewModel
     {
