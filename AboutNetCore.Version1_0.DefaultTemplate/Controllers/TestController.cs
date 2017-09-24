@@ -85,5 +85,29 @@ namespace AboutNetCore.Version1_0.DefaultTemplate.Controllers
 
             return View(model);
         }
+
+        [HttpGet]
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Create(TestCreateViewModel model)
+        {
+            var id = _testeService
+                .GetAll()
+                .Max(m => m.Id) + 1;
+
+            _testeService.Add(new Test
+            {
+                Id = id,
+                Name = model.Name
+            });
+
+            //POST Redirect GET Patterns
+            return RedirectToAction("Details", new { id });
+        }
     }
 }

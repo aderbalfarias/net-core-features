@@ -31,5 +31,10 @@ namespace AboutNetCore.Version1_0.DefaultTemplate.Services
         {
             return _testList.FirstOrDefault(f => f.Id == id);
         }
+
+        public void Add(Test entity)
+        {
+            _testList.Add(entity);
+        }
     }
 }

@@ -7,5 +7,6 @@ namespace AboutNetCore.Version1_0.DefaultTemplate.Services.Interfaces
     {
         IEnumerable<Test> GetAll();
         Test Get(int id);
+        void Add(Test entity);
     }
 }
