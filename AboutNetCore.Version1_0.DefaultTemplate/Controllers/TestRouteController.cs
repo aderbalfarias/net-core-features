@@ -6,7 +6,7 @@ namespace AboutNetCore.Version1_0.DefaultTemplate.Controllers
 {
     //[Route("[controller]")]
     //[Route("[controller]/[action]")]
-    [Route("test")]
+    [Route("Xpto")]
 
     public class TestRouteController : Controller
     {
@@ -18,7 +18,7 @@ namespace AboutNetCore.Version1_0.DefaultTemplate.Controllers
             return View();
         }
 
-        [Route("xpto")]
+        [Route("Test")]
         //[Route("[action]")]
         public IActionResult GetXpto()
         {
