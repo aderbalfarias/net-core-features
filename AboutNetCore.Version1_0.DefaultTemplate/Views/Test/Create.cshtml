@@ -4,10 +4,10 @@
 }
 
 <section>
-    <form asp-controller="Test" asp-action="Create" method="post" class="form-horizontal">
+    <form asp-controller="Test" asp-action="Create" method="post" class="form-horizontal" asp-antiforgery="true">
         <h4>Create new Test</h4>
         <hr />
-        @Html.AntiForgeryToken()
+
         <div asp-validation-summary="All" class="text-danger"></div>
         <div asp-="All" class="text-danger"></div>
         <div class="form-group">

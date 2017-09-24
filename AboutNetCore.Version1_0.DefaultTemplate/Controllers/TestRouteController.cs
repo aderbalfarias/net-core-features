@@ -7,7 +7,6 @@ namespace AboutNetCore.Version1_0.DefaultTemplate.Controllers
     //[Route("[controller]")]
     //[Route("[controller]/[action]")]
     [Route("Xpto")]
-
     public class TestRouteController : Controller
     {
         [Route("")]
