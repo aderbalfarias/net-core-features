@@ -17,7 +17,15 @@ namespace AboutNetCore.Version1_0.DefaultTemplate.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            var model = _testeService
+                .GetAll()
+                .Select(s => new TestViewModel
+                {
+                    Id = s.Id,
+                    Name = s.Name
+                });
+
+            return View(model);
         }
 
         public IActionResult Object()
@@ -30,19 +38,6 @@ namespace AboutNetCore.Version1_0.DefaultTemplate.Controllers
 
             //return Json
             return new ObjectResult(model);
-        }
-
-        public IActionResult ViewList()
-        {
-            var model = _testeService
-                .GetAll()
-                .Select(s => new TestViewModel
-                {
-                    Id = s.Id,
-                    Name = s.Name
-                });
-
-            return View(model);
         }
 
         public IActionResult ViewDynamic()
