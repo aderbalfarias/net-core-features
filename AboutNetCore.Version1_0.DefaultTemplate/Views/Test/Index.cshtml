@@ -15,7 +15,8 @@
     {
         <tr>
             <td>@item.Name</td>
-            <td><a asp-controller="Test" asp-action="Details" asp-route-id="@item.Id">Details</a></td>
+            <td><a asp-controller="Test" asp-action="Details" asp-route-id="@item.Id">Details</a></td> 
+            <td><a asp-controller="Test" asp-action="Edit" asp-route-id="@item.Id">Edit</a></td>
         </tr>
     }
 </table>

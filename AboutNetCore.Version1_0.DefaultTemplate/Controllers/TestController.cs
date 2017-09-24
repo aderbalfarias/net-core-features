@@ -2,6 +2,7 @@
 using AboutNetCore.Version1_0.DefaultTemplate.Services.Interfaces;
 using AboutNetCore.Version1_0.DefaultTemplate.ViewModels.Test;
 using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Linq;
 
 namespace AboutNetCore.Version1_0.DefaultTemplate.Controllers
@@ -81,6 +82,57 @@ namespace AboutNetCore.Version1_0.DefaultTemplate.Controllers
             return View(model);
         }
 
+        public IActionResult Edit(int id)
+        {
+            try
+            {
+                var test = _testeService.Get(id);
+
+                if (test == null)
+                    return RedirectToAction(nameof(Index));
+
+                var model = new TestEditViewModel
+                {
+                    Id = test.Id,
+                    Name = test.Name
+                };
+
+                return View(model);
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e);
+            }
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Edit(int id, TestEditViewModel model)
+        {
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    var entity = _testeService.Get(id);
+                    entity.Name = model.Name;
+
+                    _testeService.Update(entity);
+
+                    //POST Redirect GET Patterns
+                    return RedirectToAction("Details", new { id = entity.Id });
+                }
+                else
+                {
+                    return View(model);
+                }
+
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e);
+            }
+        }
+
         [HttpGet]
         public IActionResult Create()
         {
@@ -91,15 +143,22 @@ namespace AboutNetCore.Version1_0.DefaultTemplate.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult Create(TestCreateViewModel model)
         {
-            var entity = new Test
+            try
             {
-                Name = model.Name
-            };
+                var entity = new Test
+                {
+                    Name = model.Name
+                };
 
-            _testeService.Add(entity);
+                _testeService.Add(entity);
 
-            //POST Redirect GET Patterns
-            return RedirectToAction("Details", new { id = entity.Id });
+                //POST Redirect GET Patterns
+                return RedirectToAction("Details", new { id = entity.Id });
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e);
+            }
         }
     }
 }

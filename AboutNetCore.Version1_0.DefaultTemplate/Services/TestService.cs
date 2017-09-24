@@ -30,5 +30,11 @@ namespace AboutNetCore.Version1_0.DefaultTemplate.Services
             _context.Tests.Add(entity);
             _context.SaveChanges();
         }
+
+        public void Update(Test entity)
+        {
+            _context.Tests.Update(entity);
+            _context.SaveChanges();
+        }
     }
 }
