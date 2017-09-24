@@ -20,8 +20,7 @@ namespace AboutNetCore.Version1_0.DefaultTemplate.Data
             // For example, you can rename the ASP.NET Identity table names and more.
             // Add your customizations after calling base.OnModelCreating(builder);
             builder.Entity<Test>()
-                .HasKey(k => k.Id)
-                .ForSqlServerIsClustered();
+                .HasKey(k => k.Id);
 
             builder.Entity<Test>()
                 .Property(p => p.Name)

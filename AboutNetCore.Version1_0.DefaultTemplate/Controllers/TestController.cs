@@ -96,18 +96,15 @@ namespace AboutNetCore.Version1_0.DefaultTemplate.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult Create(TestCreateViewModel model)
         {
-            var id = _testeService
-                .GetAll()
-                .Max(m => m.Id) + 1;
-
-            _testeService.Add(new Test
+            var entity = new Test
             {
-                Id = id,
                 Name = model.Name
-            });
+            };
+
+            _testeService.Add(entity);
 
             //POST Redirect GET Patterns
-            return RedirectToAction("Details", new { id });
+            return RedirectToAction("Details", new { id = entity.Id });
         }
     }
 }
