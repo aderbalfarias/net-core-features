@@ -53,7 +53,7 @@ namespace AboutNetCore.Version1_0.DefaultTemplate
             // Add application services.
             services.AddTransient<IEmailSender, AuthMessageSender>();
             services.AddTransient<ISmsSender, AuthMessageSender>();
-            services.AddScoped<ITesteService, InMemoryTestService>();
+            services.AddScoped<ITesteService, TestService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
