@@ -36,5 +36,10 @@ namespace AboutNetCore.Version1_0.DefaultTemplate.Services
             _context.Tests.Update(entity);
             _context.SaveChanges();
         }
+
+        public string TestViewComponent()
+        {
+            return "I'm testing";
+        }
     }
 }

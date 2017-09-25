@@ -33,6 +33,7 @@
 
   <ItemGroup>
     <Folder Include="ViewModels\Home\" />
+    <Folder Include="Views\Shared\Components\Test\" />
   </ItemGroup>
 
 </Project>

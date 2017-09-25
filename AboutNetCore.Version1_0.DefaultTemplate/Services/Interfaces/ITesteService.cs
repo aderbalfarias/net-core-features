@@ -9,5 +9,6 @@ namespace AboutNetCore.Version1_0.DefaultTemplate.Services.Interfaces
         Test Get(int id);
         void Add(Test entity);
         void Update(Test entity);
+        string TestViewComponent();
     }
 }
